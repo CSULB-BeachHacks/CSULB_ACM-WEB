@@ -1,192 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSULB ACM</title>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <header class="nav">
+      <div class="nav-inner">
+        <a class="brand" href="#">
+          <img src="acm.png" alt="ACM" />
+          <span>CSULB ACM</span>
+        </a>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CSULB ACM</title>
-  <link rel="icon" href="/favicon.ico" />
-  <link rel="stylesheet" href="./styles.css" />
-  <script src="./script.js" defer></script>
-</head>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#events">Events</a>
+          <a href="#team">Team</a>
+          <a href="#sponsors">Sponsors</a>
+        </nav>
 
-<body>
-  <!-- Navigation -->
-  <header class="nav">
-    <div class="nav-inner">
-      <a class="brand" href="#">
-        <img src="acm.png" alt="ACM" />
-        <span>CSULB ACM</span>
-      </a>
+        <a
+          class="cta"
+          href="https://beachhacks.com"
+          target="_blank"
+          rel="noopener"
+          >BeachHacks</a
+        >
 
-      <nav class="nav-links" aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#events">Events</a>
-        <a href="#team">Team</a>
-        <a href="#sponsors">Sponsors</a>
-      </nav>
-
-      <a class="cta" href="https://beachhacks.com" target="_blank" rel="noopener">BeachHacks</a>
-
-      <button class="menu-btn" aria-label="Open menu">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-          stroke-linejoin="round">
-          <line x1="3" y1="6" x2="21" y2="6" />
-          <line x1="3" y1="12" x2="21" y2="12" />
-          <line x1="3" y1="18" x2="21" y2="18" />
-        </svg>
-      </button>
-    </div>
-  </header>
-
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-inner">
-      <div class="eyebrow">Association for Computing Machinery</div>
-      <h1 class="title">Build. Connect. Lead.</h1>
-      <p class="subtitle">
-        CSULB ACM is the largest Computer Science student organization at
-        California State University, Long Beach. Join a community of builders,
-        learners, and leaders pushing technology forward.
-      </p>
-      <div class="hero-cta">
-        <a class="button primary" href="#events">See Events</a>
-        <a class="button ghost" href="#about">Learn More</a>
+        <button class="menu-btn" aria-label="Open menu">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
       </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- Placeholder sections for anchors -->
-  <main>
-    <section id="about" style="max-width: var(--max-content); margin: 64px auto; padding: 0 20px">
-      <h2 style="margin: 0 0 12px 0; font-size: 1.75rem">About</h2>
-      <p class="about-text" style="margin: 0; color: var(--text-muted)">
-        <span class="gradient-word">CSULB ACM</span> is the largest
-        computer science student organization at California State
-        University, Long Beach. Our mission is to empower students to
-        <strong>Learn</strong>, <strong>Build</strong>, and
-        <strong>Connect</strong> through workshops, hackathons, and
-        networking events.
-      </p>
-      <p class="about-text" style="margin: 0; color: var(--text-muted)">
-        We host weekly workshops, industry panels, and our annual
-        hackathon <a href="https://beachhacks.com" target="_blank">BeachHacks</a>.
-        Whether you’re new to coding or an experienced developer, ACM
-        offers opportunities to grow, collaborate, and prepare for your
-        career.
-      </p>
-      <div class="about-stats" style="display: flex; gap: 24px; margin-top: 20px; flex-wrap: wrap;">
-        <div><strong>200+</strong> Members</div>
-        <div><strong>30+</strong> Workshops Annually</div>
-        <div><strong>10+</strong> Industry Sponsors</div>
-      </div>
-    </section>
-
-    <section id="events" class="section" style="max-width: var(--max-content); margin: 64px auto; padding: 0 20px">
-      <div class="container">
-        <h2 style="margin: 0 0 12px 0; font-size: 1.75rem" > Events </h2>
-        <p style="text-align:center; color: var(--text-muted); margin-bottom: 24px;">
-          All workshops are held on <strong>Tuesdays from 4–5 PM</strong>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="eyebrow">Association for Computing Machinery</div>
+        <h1 class="title">Build. Connect. Lead.</h1>
+        <p class="subtitle">
+          CSULB ACM is the largest Computer Science student organization at
+          California State University, Long Beach. Join a community of builders,
+          learners, and leaders pushing technology forward.
         </p>
-
-        <div class="events-table">
-          <table>
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>People</th>
-                <th>Workshop</th>
-                <th>Date</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>Soham, Bryan</td>
-                <td>Learning to use Git</td>
-                <td>Sep 9</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Divyanshu, Keshav</td>
-                <td>Intro to WebDev & Chrome Extensions</td>
-                <td>Sep 16</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Keshav, Winston</td>
-                <td>Why Linux is AWESOME</td>
-                <td>Sep 23</td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>Winston, Keshav</td>
-                <td>Serverless / REST API</td>
-                <td>Sep 30</td>
-              </tr>
-              <tr>
-                <td>5</td>
-                <td>Vansh, Bryan</td>
-                <td>Malware Program</td>
-                <td>Oct 7</td>
-              </tr>
-              <tr>
-                <td>6</td>
-                <td>Marisol, Bryan</td>
-                <td>Game Dev</td>
-                <td>Oct 14</td>
-              </tr>
-              <tr>
-                <td>7</td>
-                <td>Keshav, Tiago, alumni: Charles, Sroth</td>
-                <td>How to land your first internship</td>
-                <td>Oct 21</td>
-              </tr>
-              <tr>
-                <td>8</td>
-                <td>Aailand, industry rep</td>
-                <td>Resume review + interview guide</td>
-                <td>TBA</td>
-              </tr>
-              <tr>
-                <td>9</td>
-                <td>Sophia, Bryan</td>
-                <td>How to make the most of a hackathon</td>
-                <td>Oct 28</td>
-              </tr>
-              <tr>
-                <td>10</td>
-                <td>Angel, Keshav</td>
-                <td>Everything about Open Source Code</td>
-                <td>Nov 4</td>
-              </tr>
-              <tr>
-                <td>11</td>
-                <td>All ACM Officers, Bryan + Keshav (hosts), Starbound Team Coordinators</td>
-                <td>Project Starbound Liftoff</td>
-                <td>Nov 18</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="hero-cta">
+          <a class="button primary" href="#events">See Events</a>
+          <a class="button ghost" href="#about">Learn More</a>
         </div>
       </div>
     </section>
 
-  </main>
+    <!-- Placeholder sections for anchors -->
+    <main
+      id="about"
+      style="max-width: var(--max-content); margin: 64px auto; padding: 0 20px"
+    >
+      <h2 style="margin: 0 0 12px 0; font-size: 1.75rem">About</h2>
+      <p style="margin: 0; color: var(--text-muted)">
+        👷‍♂️In Construction.... 🏗️ 👀
+      </p>
+    </main>
 
-  <footer style="border-top: 1px solid var(--nav-border); color: var(--text-muted)">
-    <div style="
+    <footer
+      style="border-top: 1px solid var(--nav-border); color: var(--text-muted)"
+    >
+      <div
+        style="
           max-width: var(--max-content);
           margin: 0 auto;
           padding: 22px 20px;
           display: flex;
           align-items: center;
           gap: 12px;
-        ">
-      <img src="acm.png" alt="ACM" style="width: 20px; height: 20px" />
-      <span>© 2025 CSULB ACM</span>
-    </div>
-  </footer>
-</body>
-
+        "
+      >
+        <img src="acm.png" alt="ACM" style="width: 20px; height: 20px" />
+        <span>© 2025 CSULB ACM</span>
+      </div>
+    </footer>
+  </body>
 </html>
