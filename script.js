@@ -136,6 +136,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Add dark mode toggle button
   addDarkModeToggle();
+
+  // NEW: build the Team cards
+  renderOfficers();
+  
 });
 
 // Dark mode toggle functionality
@@ -175,10 +179,70 @@ function toggleDarkMode() {
     toggleBtn.title = "Switch to Halloween Theme";
     localStorage.setItem("userTheme", "default");
   } else {
-    // Currently default theme, switch to Halloween
+
     applyHalloweenTheme();
     toggleBtn.innerHTML = "☀️";
     toggleBtn.title = "Switch to Default Theme";
     localStorage.setItem("userTheme", "halloween");
   }
+}
+
+
+// ---- Officers data (edit roles/quotes as needed) ----
+const OFFICERS = [
+  { name: "Bryan Tineo", role: "President", img: "Officers_Image/BryanTineo.png", quote: "Mindset is Everything" },
+  { name: "Keshav Jindal", role: "Co-President", img: "Officers_Image/KeshavJindal.png", quote: "Do the impossible, see the invisible" },
+  { name: "Sophia Doan", role: "Media Chair", img: "Officers_Image/SophiaDoan.png", quote: "Live young, live hard" },
+  { name: "Soham Vankudre", role: "Recruitment Chair", img: "Officers_Image/SohamVankudre.png", quote: "You can't be a winner if you're always afraid of losing" },
+  { name: "Marisol Morales", role: "BeachHacks Logistics Director", img: "Officers_Image/MarisolMorales.png", quote: "Bingle bongle, dingle dangle, yickedy doo" },
+  { name: "Aalind Kale", role: "Outreach Chair", img: "Officers_Image/AalindKale.png", quote: "I am McLovin" },
+  { name: "Deanna Solis", role: "UI/UX Designer", img: "Officers_Image/DeannaSolis.png", quote: "90% of people quit before they win big" },
+  { name: "Vansh Patel", role: "BeachHacks Tech Director", img: "Officers_Image/VanshPatel.png", quote: "Why not me?" },
+  { name: "Divyanshu Mehta", role: "Webmaster", img: "Officers_Image/DivyanshuMehta.png", quote: "I am the danger. A guy opens his door and gets shot and you think that of me? No. I am the one who knocks" },
+  { name: "Nathan Nguyen", role: "Membership Chair", img: "Officers_Image/Nathan Nguyen.png", quote: "Be who you are and say what you feel, because those who mind don't matter, and those who matter don't mind" },
+  { name: "Winston Ta", role: "BeachHacks Marketing Director", img: "Officers_Image/WinstonTa.png", quote: "Take the leap of faith" },
+  { name: "Krisha Hemani", role: "Treasurer", img: "Officers_Image/KrishaHemani.png", quote: "Live, Laugh, Love" },
+  { name: "Krrish Kohli", role: "ASEB Representative", img: "Officers_Image/KrrishKohli.png", quote: "Limits only exist until you shatter them" },
+  { name: "Angel Rivera", role: "Secretary", img: "Officers_Image/AngelRivera.png", quote: "Imagine you're on your deathbed, and standing around your deathbed are the ghosts representing your unfulfilled potential" },
+  { name: "Tiago Borges", role: "Social Media Chair", img: "Officers_Image/Tiago Borges.png", quote: "Do or do not, there is no try" },
+];
+
+// ---- Render Team cards ----
+function renderOfficers() {
+  const grid = document.getElementById("officers-grid");
+  if (!grid) return;
+
+  const cards = OFFICERS.map((o, idx) => {
+    const alt = `${o.name} — ${o.role}`;
+    return `
+    <div class="flip-card">
+      <button type="button" aria-label="Flip card for ${o.name}" data-card-index="${idx}">
+        <div class="flip-inner" role="group" aria-roledescription="flip card">
+          <div class="flip-face card-front">
+            <div class="photo-wrap">
+              <img src="${o.img}" alt="${alt}">
+            </div>
+            <div class="meta">
+              <div class="name">${o.name}</div>
+              <div class="role">${o.role}</div>
+            </div>
+          </div>
+          <div class="flip-face card-back">
+            <blockquote>${o.quote || "…"}</blockquote>
+          </div>
+        </div>
+      </button>
+    </div>`;
+  }).join("");
+
+  grid.innerHTML = cards;
+
+  // Click / keyboard toggle
+  grid.querySelectorAll(".flip-card button").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const inner = btn.querySelector(".flip-inner");
+      inner.classList.toggle("is-flipped");
+    });
+    // Enter/Space already trigger click on buttons; no extra handler needed
+  });
 }
