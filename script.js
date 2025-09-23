@@ -200,11 +200,11 @@ const OFFICERS = [
   { name: "Vansh Patel", role: "BeachHacks Tech Director", img: "Officers_Image/VanshPatel.png", quote: "Why not me?" },
   { name: "Divyanshu Mehta", role: "Webmaster", img: "Officers_Image/DivyanshuMehta.png", quote: "I am the danger. A guy opens his door and gets shot and you think that of me? No. I am the one who knocks" },
   { name: "Nathan Nguyen", role: "Membership Chair", img: "Officers_Image/Nathan Nguyen.png", quote: "Be who you are and say what you feel, because those who mind don't matter, and those who matter don't mind" },
+  { name: "Tiago Borges", role: "Social Media Chair", img: "Officers_Image/Tiago Borges.png", quote: "Do or do not, there is no try" },
   { name: "Winston Ta", role: "BeachHacks Marketing Director", img: "Officers_Image/WinstonTa.png", quote: "Take the leap of faith" },
   { name: "Krisha Hemani", role: "Treasurer", img: "Officers_Image/KrishaHemani.png", quote: "Live, Laugh, Love" },
   { name: "Krrish Kohli", role: "ASEB Representative", img: "Officers_Image/KrrishKohli.png", quote: "Limits only exist until you shatter them" },
   { name: "Angel Rivera", role: "Secretary", img: "Officers_Image/AngelRivera.png", quote: "Imagine you're on your deathbed, and standing around your deathbed are the ghosts representing your unfulfilled potential" },
-  { name: "Tiago Borges", role: "Social Media Chair", img: "Officers_Image/Tiago Borges.png", quote: "Do or do not, there is no try" },
 ];
 
 // ---- Render Team cards ----
