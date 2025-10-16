@@ -71,7 +71,7 @@ const Events = () => {
             >
               <div className="px-8 py-4 bg-gradient-to-r from-primary/20 to-secondary/10 rounded-xl border border-primary/50 glow-border hover:scale-105 transition-transform scan-effect">
                 <p className="text-2xl font-bold text-gradient animate-processing">
-                  BeachHacks 9.0 processing
+                  BeachHacks 9.0 processing ......
                   <span className="inline-flex">
                     <span className="animate-[pulse_1.4s_ease-in-out_infinite]">.</span>
                     <span className="animate-[pulse_1.4s_ease-in-out_0.2s_infinite]">.</span>
